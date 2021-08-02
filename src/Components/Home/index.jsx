@@ -8,11 +8,13 @@ const Home = () => {
     useEffect(() => {
         fetchPost();
     }, [])
+    // For calling GetAllPost Service
     const fetchPost = () => {
         getPost().then(res => {
             setPost(res)
         })
     }
+    // Handling Single post
     const handleClick = (id) => {
         history.push(`/post/${id}`)
     }
